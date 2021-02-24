@@ -1,6 +1,6 @@
 - name: AbuseIO base installation
   gather_facts: yes
-  hosts: localhost
+  hosts: all
   become: yes
   become_method: su
   vars_files:
@@ -16,7 +16,7 @@
     - vars/postfix.yml
 
   pre_tasks:
-  - name: install ansible required packages, like python 
+  - name: install ansible required packages, like python
     raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
   - name: install ansible required packages, like python-netaddr
     raw: python -c "import netaddr" || (apt -y update && apt install -y python-netaddr)
@@ -42,4 +42,3 @@
     - { role: git,                  tags: 'git' }
     - { role: pdns-recursor,        tags: 'pdns-recursor' }
     - { role: lockdown,             tags: 'lockdown' }
-
