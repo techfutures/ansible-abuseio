@@ -1,18 +1,17 @@
 abuseio_version: "4.1"
 abuseio_basedir: "/opt/abuseio"
-abuseio_hostname: "abuseio.isp.local"
+abuseio_hostname: "{{ awx_abuseio_hostname }}"
 
-abuseio_admin_contact: "admin@isp.local"
-abuseio_abuse_contact: "abuse@isp.local"
+abuseio_admin_contact: "{{ awx_abuseio_admin }}"
+abuseio_abuse_contact: "{{ awx_abuseio_abuse }}"
 
-abuseio_admin_user: "admin@isp.local"
-abuseio_admin_password: "changemetoo"
+abuseio_admin_user: "{{ abuseio_username }}"
+abuseio_admin_password: "{{ abuseio_password }}"
 
-abuseio_mysql_root_password: "changeme1"
+abuseio_mysql_root_password: "{{ root_db_password }}"
 abuseio_mysql_database_name: "abuseio"
-abuseio_mysql_database_user: "abuseio_usr"
-abuseio_mysql_database_password: "changeme2"
+abuseio_mysql_database_user: "{{ db_username }}"
+abuseio_mysql_database_password: "{{ db_password }}"
 
 abuseio_trusted_v4_cidr: "0.0.0.0/0"
 abuseio_trusted_v6_cidr: "::0/0"
-
