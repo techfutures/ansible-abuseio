@@ -5,3 +5,4 @@
 - name: Ensure Apache is installed on Debian.
   apt: name="{{ item }}" state="{{ apache_packages_state }}"
   with_items: "{{ apache_packages }}"
+  state: present
