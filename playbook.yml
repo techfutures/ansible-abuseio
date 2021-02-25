@@ -16,6 +16,11 @@
     - vars/postfix.yml
 
   pre_tasks:
+  - name: apt-get update
+    register: updatesys
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
   - name: install ansible required packages, like python
     raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
   - name: install ansible required packages, like python-netaddr
@@ -24,7 +29,9 @@
     raw: python -c "import dns.zone" || (apt -y update && apt install -y python-dnspython)
   - name: install dnsutils package
     apt:
-      name: dnsutils
+      name:
+        - dnsutils
+        - python-dns
       state: present
   - name: run preflight checks
     import_tasks: tests/preflight.yml
