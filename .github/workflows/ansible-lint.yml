@@ -52,5 +52,4 @@ jobs:
         #                         path to directories or files to skip. This option is
         #                         repeatable.
         #   -c C                  Specify configuration file to use. Defaults to ".ansible-lint"
-        args: "-x command-instead-of-module -x internal-error"
-            
+        args: "-x command-instead-of-module -x internal-error -x meta-incorrect -x meta-no-info -x no-changed-when -x command-instead-of-shell"
