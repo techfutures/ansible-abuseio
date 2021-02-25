@@ -12,15 +12,15 @@
     name: abuseio
     state: present
 
-- name: Create abuseio user
-  user:
-    name: abuseio
-    state: present
-    shell: /bin/bash
-    createhome: no
-    home: /opt/abuseio
-    groups: abuseio
-    append: yes
+#- name: Create abuseio user
+#  user:
+#    name: abuseio
+#    state: present
+#    shell: /bin/bash
+#    createhome: no
+#    home: /opt/abuseio
+#    groups: abuseio
+#    append: yes
 
 - name: Adding existing user '{{ item }}' to group abuseio
   user:
