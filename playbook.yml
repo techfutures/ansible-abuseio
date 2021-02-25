@@ -37,7 +37,7 @@
 #    import_tasks: tests/preflight.yml
 
   roles:
-    - { role: firewall,             tags: 'firewall' }
+#    - { role: firewall,             tags: 'firewall' }
     - { role: certbot,              tags: 'certbot' }
     - { role: apache,               tags: 'apache' }
     - { role: mysql,                tags: 'mysql' }
@@ -51,5 +51,5 @@
     - { role: abuseio,              tags: 'abuseio' }
     - { role: postfix,              tags: 'postfix' }
     - { role: git,                  tags: 'git' }
-    - { role: pdns-recursor,        tags: 'pdns-recursor' }
-    - { role: lockdown,             tags: 'lockdown' }
+#    - { role: pdns-recursor,        tags: 'pdns-recursor' }
+#    - { role: lockdown,             tags: 'lockdown' }
