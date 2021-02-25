@@ -22,15 +22,15 @@
 #    groups: abuseio
 #    append: yes
 
-- name: Adding existing user '{{ item }}' to group abuseio
+- name: Adding existing user abusio to group abuseio
   user:
-    name: '{{ item }}'
+    name: abuseio
     state: present
     groups: abuseio
     append: yes
   with_items:
     - "www-data"
-    - "postfix"
+  #  - "postfix"
   notify: restart apache
 
 - name: create ENV configuration.
