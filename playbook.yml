@@ -50,6 +50,6 @@
   #  - { role: phpmyadmin,           tags: 'phpmyadmin' }
     - { role: abuseio,              tags: 'abuseio' }
   #  - { role: postfix,              tags: 'postfix' }
-    - { role: git,                  tags: 'git' }
+  #  - { role: git,                  tags: 'git' }
 #    - { role: pdns-recursor,        tags: 'pdns-recursor' }
 #    - { role: lockdown,             tags: 'lockdown' }
